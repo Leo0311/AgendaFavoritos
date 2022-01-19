@@ -1,0 +1,15 @@
+<form [formGroup]="formEntity">
+  <div *ngFor="let value of keys">
+    <label [for]="value">{{ value }}:</label>
+    <br />
+    <input type="text" [formControlName]="value" [id]="value" />
+    <br />
+  </div>
+
+  <br />
+
+  <div>
+    <button type="button" (click)="Enviar()">Enviar</button>
+    <button type="button" (click)="Voltar()">Cancel</button>
+  </div>
+</form>
